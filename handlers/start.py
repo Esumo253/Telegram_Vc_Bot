@@ -4,39 +4,39 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from config import BOT_USERNAME
 
 
-@Client.on_message(filters.command(["start", "start@GroupMusicPlayBot"]) & filters.private & ~filters.channel)
+@Client.on_message(filters.command(["start", "start@GroupMusicMasterBot"]) & filters.private & ~filters.channel)
 async def start(_, message: Message):
     await message.reply_text(
         text="**Hello 👋🏻 {}!**\n\nI **Can Play Music In Voice Chats of Telegram Groups.**I Have A **lot of cool feature that will amaze You!**\n\n**Click /cmdlist For More Help On My Usage ❤**".format(message.from_user.mention),
         reply_markup=InlineKeyboardMarkup(
             [[
-            InlineKeyboardButton("➕ Add To Your Group ➕", url="https://t.me/GroupMuSicPlayBot?startgroup=true")
+            InlineKeyboardButton("➕ Add To Your Group ➕", url="https://t.me/GroupMusicMasterBot?startgroup=true")
             ],[
-            InlineKeyboardButton("💬 Group", url="https://t.me/MusicBotSupports"),
-            InlineKeyboardButton("Channel 🔊", url="https://t.me/GroupMusicXNews")
+            InlineKeyboardButton("💬 Group", url="https://t.me/joinchat/SXXW5zxzEn0lQywB"),
+            InlineKeyboardButton("Channel 🔊", url="https://t.me/GroupMusicMaster")
             ],[
-            InlineKeyboardButton("Commands 🛠", url="https://telegra.ph/Music-Bot-05-07")
+            InlineKeyboardButton("Commands 🛠", url="https://t.me/GroupMusicMaster")
             ]]
         ),
         disable_web_page_preview=True
     )
         
-@Client.on_message(filters.command(["start", "start@GroupMusicPlayBot"]) & ~filters.private & ~filters.channel)
+@Client.on_message(filters.command(["start", "start@GroupMusicMasterBot"]) & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
     await message.reply_text(
         text="**Music Bot Is Online ✅**",
         reply_markup=InlineKeyboardMarkup(
             [[
-            InlineKeyboardButton(text="🎙️ Support Group 🎙️", url="https://t.me/MusicBotSupports")
+            InlineKeyboardButton(text="🎙️ Support Group 🎙️", url="https://t.me/joinchat/SXXW5zxzEn0lQywB")
             ]]
         )
     )
 
 
-@Client.on_message(filters.command(["cmdlist", "start@GroupMusicPlayBot"]) & filters.private & ~filters.channel)
+@Client.on_message(filters.command(["cmdlist", "start@GroupMusicMasterBot"]) & filters.private & ~filters.channel)
 async def cmdlist(_, message: Message):
     await message.reply_text(
-        text="""**Group Music Bot : Help Menu**
+        text="""**Group Music Master Bot : Help Menu**
 
 __× First Add Me To Your Group..
 × Promote Me As Admin In Your Group With All Permission..__
@@ -66,7 +66,7 @@ __× First Add Me To Your Group..
 • `/userbotleave` : __Assistant Leaves From The Group.__""",
         reply_markup=InlineKeyboardMarkup(
               [[
-              InlineKeyboardButton(text="🎙️ Support Group 🎙️", url="https://t.me/MusicBotSupports")
+              InlineKeyboardButton(text="🎙️ Support Group 🎙️", url="https://t.me/joinchat/SXXW5zxzEn0lQywB")
               ]]
           )
       )
