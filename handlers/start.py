@@ -15,7 +15,7 @@ async def start(_, message: Message):
             InlineKeyboardButton("💬 Group", url="https://t.me/joinchat/SXXW5zxzEn0lQywB"),
             InlineKeyboardButton("Channel 🔊", url="https://t.me/GroupMusicMaster")
             ],[
-            InlineKeyboardButton("Commands 🛠", url="https://t.me/GroupMusicMaster")
+            InlineKeyboardButton("Commands 🛠", url="https://t.me/GroupMusicMaster/13")
             ]]
         ),
         disable_web_page_preview=True
